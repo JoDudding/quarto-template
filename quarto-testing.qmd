@@ -1,0 +1,152 @@
+---
+title: "[My Quarto template]{.pale}"
+subtitle: "{{< fa brands github >}} <https://github.com/jodudding>"
+format: 
+  html:
+    title-block-banner: true
+---
+
+## Quarto
+
+[Quarto]{.rev} enables you to weave together [content]{.primary} and [executable code]{.secondary} into a **finished document**. To learn more about Quarto see <https://quarto.org>.
+
+```{r}
+#| label: source-setup
+#| include: false
+source('scripts/_setup.r')
+```
+
+Will try publishing to Quarto Pub. User name is [jo-dudding]{.secondary}
+
+`quarto publish quarto-pub`
+
+::: .callout-warning
+Did not work as this is not a book or website project.
+:::
+
+Code text uses the font [Fira Code](https://fonts.google.com/specimen/Fira+Code).
+
+```{r}
+#| label: sample-code
+test <- tibble(x = 1:6, label = letters[1:6]) |> 
+  mutate(y = x / 100)
+```
+
+@fig-example-chart below demonstrates my ggplot2 theme.
+
+```{r}
+#| label: fig-example-chart
+#| fig-cap: Caption of example chart
+#| fig-alt: You can write alt text to help explain the chart.
+
+ggplot(test, aes(x, y, fill = label)) +
+  geom_col() +
+  scale_x_comma() +
+  scale_y_pct() +
+  scale_fill_jo_d(6) +
+  labs(
+    x = 'X axis',
+    y = 'Y axis',
+    fill = 'Fill',
+    title = 'Title',
+    subtitle = 'Subtitle',
+    caption = 'Caption'
+  )
+```
+
+```{r}
+#| label: fig-example-chart-2
+#| fig-cap: Caption of example chart
+#| fig-alt: You can write alt text to help explain the chart.
+
+ggplot(test, aes(x, y, colour = y)) +
+  geom_point() +
+  scale_x_comma() +
+  scale_y_pct() +
+scale_colour_jo_c(limits = c(0, 0.1), labels = percent_format(accuracy = 0.1)) +
+  labs(
+    x = 'X axis',
+    y = 'Y axis',
+    colour = 'Colour',
+    title = 'Title',
+    subtitle = 'Subtitle',
+    caption = 'Caption'
+  )
+```
+
+
+
+## callouts
+
+::: {.callout-note}
+Note that there are five types of callouts, including:
+`note`, `warning`, `important`, `tip`, and `caution`.
+:::
+
+::: {.callout-tip}
+## Tip with Title
+
+This is an example of a callout with a title.
+:::
+
+::: {.callout-caution collapse="true"}
+## Expand To Learn About Collapse
+
+This is an example of a 'folded' caution callout that can be expanded by the user. You can use `collapse="true"` to collapse it by default or `collapse="false"` to make a collapsible callout that is expanded by default.
+:::
+
+
+## fontawesome extension
+
+This extension provides support including free icons provided by [Font Awesome](https://fontawesome.com/).
+
+For more details see <https://github.com/quarto-ext/fontawesome>
+
+[ {{< fa book size=5x >}} ]{.gold}
+
+## bsicons extension
+
+This extension provides support including icons provided by [Bootstrap](https://icons.getbootstrap.com/).
+
+For more details see <https://github.com/shafayetShafee/bsicons>
+
+[ {{< bi stars size=5em >}} ]{.gold}
+
+## Links
+
+### Theming
+
+- [Bootswatch pulse](https://bootswatch.com/pulse/)
+- [Quarto html theming](https://quarto.org/docs/output-formats/html-themes.html)
+- [Emil slidecraft 101](https://emilhvitfeldt.com/blog.html#category=slidecraft%20101)
+- [Customizing Quarto websites](https://ucsb-meds.github.io/customizing-quarto-websites/#/title-slide)
+
+### Quarto
+
+- [Awesome Quarto links](https://github.com/mcanouil/awesome-quarto)
+
+### R
+
+- [R for Data Science](https://r4ds.had.co.nz/)
+- [R packages](https://r-pkgs.org/)
+- [What They Forgot to Teach You About R](https://rstats.wtf/)
+- [Stat 545](https://stat545.com/)
+
+### Blogs / Workshops
+
+- [Posit blog](https://posit.co/blog/)
+- [posit::conf(2023)](https://posit.co/blog/talks-and-workshops-from-posit-conf-2023/)
+- [Awesome R-Ladies’ Blogs](https://github.com/rladies/awesome-rladies-blogs)
+- []()
+- []()
+
+### Project ideas
+
+- [Making circular maps](https://thetidytrekker.com/post/making-circular-maps/making-circular-maps)
+- [Quakes dashboard](https://github.com/cwickham/quakes)
+- [https://nrennie.rbind.io/blog/script-templates-r/](https://nrennie.rbind.io/blog/script-templates-r/)
+
+
+
+
+

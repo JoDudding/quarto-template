@@ -1,0 +1,45 @@
+---
+title: "Jo's Quarto template"
+format: gfm
+
+execute:
+  warning: false
+  echo: false
+  error: false
+---
+
+This is a repo to hold my Quarto template, which is a work in progress.
+
+Here's what it looks like currently.
+
+![Draft template](theme/quarto-template-screenshot.png){width=1400}
+
+```{r}
+#| label: source-setup
+source('scripts/_setup.r') 
+```
+
+The colour palette is shown below.
+
+```{r}
+#| label: colour-palette
+
+c(
+  jo_primary = "#5F187F",
+  jo_secondary = "#FF823E",
+  jo_body = "#340048",
+  jo_rev = "#FFFFE0"
+) |> 
+  scales::show_col()
+
+```
+With this gradient
+
+```{r}
+jo_pal_grad(6) |> 
+  scales::show_col()
+```
+
+
+
+

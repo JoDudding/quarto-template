@@ -1,0 +1,33 @@
+project:
+  title: "quarto-testing"
+  execute-dir: project
+  output-dir: reports
+
+editor: visual
+
+format:
+  html:
+    theme:
+      - pulse
+      - theme/jo-theme.scss
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    embed-resources: true
+    fig-align: left
+    fig-dpi: 150
+    fig-width: 4.667
+    fig-height: 3.30
+    fig-cap-location: margin
+    tbl-cap-location: margin
+
+execute:
+  warning: false
+  echo: false
+  error: false
+
+knitr:
+  opts_chunk:
+    dev: png
+    dev.args:
+      bg: transparent
