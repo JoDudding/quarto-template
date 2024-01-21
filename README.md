@@ -1,6 +1,8 @@
 # Jo’s Quarto template
 
-This is a repo to hold my Quarto template, which is a work in progress.
+This is a repo to hold my [Quarto
+template](https://github.com/JoDudding/quarto-template), which is a work
+in progress.
 
 Here’s what it looks like currently.
 

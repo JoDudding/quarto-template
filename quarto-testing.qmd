@@ -1,6 +1,6 @@
 ---
 title: "[My Quarto template]{.pale}"
-subtitle: "{{< fa brands github >}} <https://github.com/jodudding>"
+subtitle: "{{< fa brands github >}} <https://github.com/JoDudding/quarto-template>"
 format: 
   html:
     title-block-banner: true

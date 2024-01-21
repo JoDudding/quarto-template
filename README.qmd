@@ -8,7 +8,7 @@ execute:
   error: false
 ---
 
-This is a repo to hold my Quarto template, which is a work in progress.
+This is a repo to hold my [Quarto template](https://github.com/JoDudding/quarto-template), which is a work in progress.
 
 Here's what it looks like currently.
 
@@ -39,7 +39,5 @@ With this gradient
 jo_pal_grad(6) |> 
   scales::show_col()
 ```
-
-
 
 
